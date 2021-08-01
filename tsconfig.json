@@ -24,10 +24,10 @@
 		"target": "es5",
 		"isolatedModules": true,
 		"paths": {
-			"sonovate": ["src"],
-			"atoms": ["src/atoms"],
-			"particles": ["src/particles"],
-			"sonovatetypes": ["src/particles/api/generated/index.d.ts"]
+			"sonovate": ["./src"],
+			"atoms": ["./src/atoms"],
+			"particles": ["./src/particles"],
+			"sonovatetypes": ["./src/particles/api/generated/index.d.ts"]
 		}
 	},
 	"exclude": ["node_modules/"],

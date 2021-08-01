@@ -1,7 +1,5 @@
 import { css } from "styled-components";
 
-import { device } from "sonovate";
-
 const exportedCSS = css`
 	video {
 		display: block;

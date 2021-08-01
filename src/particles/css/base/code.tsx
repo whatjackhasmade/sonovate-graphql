@@ -1,6 +1,4 @@
-import { css } from 'styled-components';
-
-import { device } from 'particles';
+import { css } from "styled-components";
 
 const exportedCSS = css``;
 
