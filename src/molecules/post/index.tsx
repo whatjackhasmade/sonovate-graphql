@@ -2,9 +2,6 @@ import React from "react";
 
 import StyledPost from "./post.styles";
 
-// Particles
-import { slugify } from "sonovate";
-
 // Atoms
 import { Link } from "sonovate";
 

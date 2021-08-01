@@ -18,10 +18,12 @@ import { TemplateBase } from "sonovate";
 
 const Skeletons: React.FC = () => {
 	return (
-		<Posts>
-			{[...Array(9)].map((_, i) => (
-				<Skeleton height="100" key={`post-skeleton-${i}`} />
-			))}
+		<Posts items={[]}>
+			<>
+				{[...Array(9)].map((_, i) => (
+					<Skeleton height="100" key={`post-skeleton-${i}`} />
+				))}
+			</>
 		</Posts>
 	);
 };

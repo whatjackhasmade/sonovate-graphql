@@ -8,7 +8,7 @@ import { PostSingular } from "sonovate";
 import type { BlogPost } from "sonovate-types";
 
 declare type PostsProps = {
-	children: React.ReactChild | Element[];
+	children?: React.ReactChild | Element[];
 	items: BlogPost[];
 };
 
@@ -21,7 +21,7 @@ const Posts: React.SFC<PostsProps> = (props: PostsProps) => {
 	if (!hasItems) return null;
 
 	return (
-		<StyledPosts className="posts">
+		<StyledPosts>
 			{items.map((item, i) => (
 				<PostSingular {...item} i={i} />
 			))}
