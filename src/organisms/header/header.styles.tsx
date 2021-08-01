@@ -8,6 +8,10 @@ const HeaderComponent = styled.header`
 	width: 100%;
 	z-index: 11;
 
+	a + a {
+		margin-left: 16px;
+	}
+
 	.header__logo {
 		max-width: 140px;
 		width: 100%;

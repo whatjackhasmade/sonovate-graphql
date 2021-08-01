@@ -1,25 +1,24 @@
 import styled from "styled-components";
+import { device } from "particles";
 
 const FooterComponent = styled.footer`
-	padding: 100px 0 200px;
+	padding: 40px 0;
 	position: relative;
 	z-index: 10;
 
 	background-color: var(--primary);
 	color: var(--white);
-	font-size: 24px;
 
-	a {
-		&:active,
-		&:focus,
-		&:hover {
-			svg {
-				fill: var(--white);
-			}
-		}
+	.footer__contents {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: var(--gridMax);
+		padding: 15px;
 
-		&::after {
-			display: none;
+		@media ${device?.xs} {
+			padding: 15px 30px;
 		}
 	}
 `;

@@ -17,6 +17,13 @@ const Header = () => {
 				</div>
 				<nav className="header__menu">
 					<Link to="/">Homepage</Link>
+					<a
+						href="https://whatjackhasmade.co.uk"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Made by Jack Pritchard
+					</a>
 				</nav>
 			</div>
 		</HeaderComponent>

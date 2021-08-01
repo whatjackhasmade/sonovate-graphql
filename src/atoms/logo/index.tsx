@@ -1,7 +1,7 @@
 const Logo = () => {
 	return (
 		<svg className="c-navbar__logo" viewBox="0 0 168 44">
-			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g transform="translate(-71.000000, -28.000000)">
 					<g transform="translate(71.000000, 28.331245)">
 						<path
