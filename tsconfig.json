@@ -27,7 +27,7 @@
 			"sonovate": ["./src"],
 			"atoms": ["./src/atoms"],
 			"particles": ["./src/particles"],
-			"sonovatetypes": ["./src/particles/api/generated/index.d.ts"]
+			"sonovate-types": ["./src/particles/api/generated/index.d.ts"]
 		}
 	},
 	"exclude": ["node_modules/"],
