@@ -16,7 +16,6 @@ const exportedCSS = css`
 		margin-left: auto;
 		margin-right: auto;
 		max-width: var(--gridMax);
-		grid-column-gap: 30px;
 		grid-template-columns: repeat(10, 1fr);
 		padding: 0 15px;
 		width: 100%;

@@ -21,7 +21,7 @@ const Posts: React.SFC<PostsProps> = (props: PostsProps) => {
 	if (!hasItems) return null;
 
 	return (
-		<StyledPosts>
+		<StyledPosts className="posts">
 			{items.map((item, i) => (
 				<PostSingular {...item} i={i} />
 			))}

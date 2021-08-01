@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 const TitleComponent = styled.div`
-	display: flex;
+	display: grid;
 	margin-bottom: 64px;
+	grid-template-columns: repeat(10, 1fr);
 
 	span {
 		display: block;
 		margin-right: 32px;
+		grid-column: 1 / 3;
 		white-space: nowrap;
 
 		font-weight: bold;
@@ -17,6 +19,7 @@ const TitleComponent = styled.div`
 
 	hr {
 		height: 0;
+		grid-column: 3 / 11;
 		width: 100%;
 		border: 1px solid #a8b6ff;
 	}

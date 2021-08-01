@@ -6,7 +6,7 @@ const StyledPosts = styled.section`
 	grid-template-columns: repeat(3, 1fr);
 
 	&.posts {
-		grid-column: 2 / 11;
+		grid-column: 3 / 11;
 	}
 `;
 
