@@ -10,26 +10,36 @@ import { Link } from "sonovate";
 
 import type { BlogPost } from "sonovate-types";
 
-const PostSingular: React.SFC<BlogPost> = (post: BlogPost) => {
-	if (!post) return null;
+declare type PostSingularProps = {
+	i: number;
+} & BlogPost;
 
-	const preface = post?.preface;
-	const sys = post?.sys;
-	const title = post?.title;
+const PostSingular: React.SFC<PostSingularProps> = (
+	props: PostSingularProps
+) => {
+	const index = props?.i;
+	const preface = props?.preface;
+	const sys = props?.sys;
+	const title = props?.title;
 	const id = sys?.id;
-
 	if (!id) return null;
 
 	const href = `/${id}`;
 	const slug = slugify(String(title));
 
-	return (
-		<StyledPost>
-			<Link to={href}>
-				<h2>{title}</h2>
+	const isLarge = index % 5 === 0;
 
-				{preface && <p>{preface}</p>}
-				<span>Read the full post</span>
+	let classList = `post`;
+	if (isLarge) classList += ` post--large`;
+
+	return (
+		<StyledPost className={classList}>
+			<Link to={href}>
+				<div className="post__body">
+					<h2>{title}</h2>
+					{preface && <p>{preface}</p>}
+				</div>
+				<span>→</span>
 			</Link>
 		</StyledPost>
 	);

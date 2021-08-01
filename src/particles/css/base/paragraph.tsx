@@ -1,16 +1,11 @@
-import { css } from 'styled-components';
-
-import { device } from 'particles';
+import { css } from "styled-components";
 
 const exportedCSS = css`
-  p {
-    font-size: var(--sizeSmall);
-    line-height: 1.3;
-
-    @media ${device?.sm} {
-      font-size: var(--sizeDefault);
-    }
-  }
+	p {
+		color: #000000;
+		font-size: 18px;
+		line-height: 27px;
+	}
 `;
 
 export default exportedCSS;

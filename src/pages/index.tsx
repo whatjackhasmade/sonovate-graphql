@@ -5,6 +5,7 @@ import { POSTS_LATEST } from "sonovate";
 
 // Atoms
 import { Skeleton } from "sonovate";
+import { Title } from "sonovate";
 
 // Molecules
 import { ErrorMessage } from "sonovate";
@@ -34,7 +35,12 @@ const Blogs = () => {
 
 	if (loading) return <Skeletons />;
 	if (error) return <ErrorMessage error={error} />;
-	return <Posts items={items} />;
+	return (
+		<>
+			<Title text="From the blog" />
+			<Posts items={items} />
+		</>
+	);
 };
 
 const BlogListingPage = () => {

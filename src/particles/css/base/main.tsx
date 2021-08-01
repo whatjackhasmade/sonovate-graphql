@@ -10,34 +10,27 @@ const exportedCSS = css`
 		width: 100%;
 	}
 
-	main {
-		> img,
-		> picture,
-		> video {
-			margin-bottom: 48px;
-			margin-top: 48px;
+	.page__wrapper {
+		align-items: flex-end;
+		display: grid;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: var(--gridMax);
+		grid-column-gap: 30px;
+		grid-template-columns: repeat(10, 1fr);
+		padding: 0 15px;
+		width: 100%;
 
-			@media ${device?.lg} {
-				margin-bottom: 80px;
-				margin-top: 80px;
-			}
+		@media ${device?.xs} {
+			padding: 0 30px;
+		}
+
+		@media ${device?.xl} {
+			padding: 0 30px;
 		}
 
 		> * {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: var(--gridLarge);
-			width: 100%;
-
-			padding: 0 15px;
-
-			@media ${device?.xs} {
-				padding: 0 30px;
-			}
-
-			@media ${device?.xl} {
-				padding: 0 30px;
-			}
+			grid-column: span 10;
 		}
 	}
 `;

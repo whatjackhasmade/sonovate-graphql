@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 const StyledPosts = styled.section`
 	display: grid;
-	grid-gap: 48px;
-	grid-row-gap: 80px;
+	grid-gap: 32px;
 	grid-template-columns: repeat(3, 1fr);
-	margin: 16px auto;
+
+	&.posts {
+		grid-column: 2 / 11;
+	}
 `;
 
 export default StyledPosts;

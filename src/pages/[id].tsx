@@ -2,7 +2,7 @@ import { requestor } from "sonovate";
 
 import { POSTS_ALL } from "sonovate";
 
-import { TemplateBase } from "sonovate";
+import { TemplatePost } from "sonovate";
 
 import { postGetStaticProps as getStaticProps } from "sonovate";
 
@@ -44,4 +44,4 @@ export async function getStaticPaths() {
 
 export { getStaticProps };
 
-export default TemplateBase;
+export default TemplatePost;

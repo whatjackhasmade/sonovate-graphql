@@ -5,32 +5,60 @@ const StyledPost = styled.div`
 	flex-direction: column;
 
 	a {
+		border-radius: 6px;
 		display: flex;
 		flex-direction: column;
 		flex: 1;
-		padding: 16px;
+		padding: 30px;
+		width: 100%;
 
 		background-color: var(--white);
-		border-top: 2px solid var(--primary);
+		border: 2px solid transparent;
+		box-shadow: 0px 2px 4px rgba(11, 15, 103, 0.06),
+			0px 4px 12px rgba(11, 15, 103, 0.04);
 		text-decoration: none;
-		transition: 0.2s background-color ease, 0.2s color ease;
-		will-change: background-color, color;
+		transition: 0.2s box-shadow ease, 0.2s border-color ease, 0.2s color ease;
 
 		&:active,
 		&:focus,
 		&:hover {
-			background-color: var(--secondary);
-			color: var(--primary);
+			color: #a8b6ff;
 
-			text-decoration: none;
+			span {
+				transform: translateX(2px);
+			}
+		}
+
+		&:hover {
+			box-shadow: 0px 4px 24px rgba(11, 15, 103, 0.2),
+				0px 2px 4px rgba(11, 15, 103, 0.06),
+				0px 4px 12px rgba(11, 15, 103, 0.04);
+		}
+
+		&:focus-visible {
+			border-color: #5045cd;
+			box-shadow: 0px 4px 24px rgba(11, 15, 103, 0.2),
+				0px 2px 4px rgba(11, 15, 103, 0.06),
+				0px 4px 12px rgba(11, 15, 103, 0.04);
+			border-radius: 6px;
+		}
+
+		span {
+			align-items: flex-end;
+			display: flex;
+			justify-content: flex-end;
+			margin-top: auto;
+
+			color: #a8b6ff;
+			transform: translateX(0px);
+			transition: 0.2s transform ease;
 		}
 	}
 
-	span:last-child {
-		display: block;
-		margin-top: auto;
-
-		font-weight: bold;
+	.post__body {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
 	}
 
 	h1,
@@ -40,20 +68,29 @@ const StyledPost = styled.div`
 	h5,
 	h6 {
 		margin: 0;
-		margin-bottom: 16px;
+		margin-bottom: 8px;
+
+		color: #5045cd;
+		font-size: 21px;
+		line-height: 24px;
 	}
 
 	p {
 		margin: 0;
 	}
 
-	p:last-of-type {
-		margin-bottom: 24px;
-	}
+	&.post--large {
+		grid-column: span 2;
 
-	strong {
-		display: block;
-		margin-bottom: 1rem;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: 25px;
+			line-height: 29px;
+		}
 	}
 `;
 

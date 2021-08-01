@@ -59,7 +59,7 @@ const ThemeDefault = {
 	primaryDark: "#10031a",
 	secondary: "#01e1fd",
 	bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
-	font: `"Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif`,
+	font: `Arial, sans-serif`,
 	sizeSmall: "16px",
 	sizeDefault: "18px",
 	sizeLarge: "24px",

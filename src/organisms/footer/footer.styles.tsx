@@ -9,6 +9,11 @@ const FooterComponent = styled.footer`
 	background-color: var(--primary);
 	color: var(--white);
 
+	a,
+	p {
+		color: var(--white);
+	}
+
 	.footer__contents {
 		align-items: center;
 		display: flex;

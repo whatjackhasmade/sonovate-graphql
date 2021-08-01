@@ -20,7 +20,13 @@ const Posts: React.SFC<PostsProps> = (props: PostsProps) => {
 	const hasItems = items?.length > 0;
 	if (!hasItems) return null;
 
-	return <StyledPosts>{items.map(PostSingular)}</StyledPosts>;
+	return (
+		<StyledPosts className="posts">
+			{items.map((item, i) => (
+				<PostSingular {...item} i={i} />
+			))}
+		</StyledPosts>
+	);
 };
 
 export { Posts };

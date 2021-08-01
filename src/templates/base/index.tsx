@@ -17,7 +17,9 @@ const TemplateBase = (props: BaseProps) => {
 	return (
 		<React.Fragment>
 			<Header />
-			<main>{children}</main>
+			<main>
+				<div className="page__wrapper">{children}</div>
+			</main>
 			<Footer />
 		</React.Fragment>
 	);
