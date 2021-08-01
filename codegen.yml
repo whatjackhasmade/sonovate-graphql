@@ -1,0 +1,7 @@
+schema: "src/particles/api/schema.gql"
+generates:
+  src/particles/api/generated/index.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
