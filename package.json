@@ -11,7 +11,7 @@
 		"codegen": "graphql-codegen --config codegen.yml"
 	},
 	"engines": {
-		"node": "14.16.0"
+		"node": "14.x"
 	},
 	"dependencies": {
 		"@apollo/client": "3.3.19",
