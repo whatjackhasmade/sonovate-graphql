@@ -10,13 +10,13 @@ const Header = () => {
 		<HeaderComponent className="header">
 			<div className="header__contents">
 				<div className="header__logo">
-					<Link to="/">
+					<Link href="/">
 						<Logo />
 						<span className="hidden">Sonovate Homepage</span>
 					</Link>
 				</div>
 				<nav className="header__menu">
-					<Link to="/">Homepage</Link>
+					<Link href="/">Homepage</Link>
 					<a
 						href="https://whatjackhasmade.co.uk"
 						target="_blank"

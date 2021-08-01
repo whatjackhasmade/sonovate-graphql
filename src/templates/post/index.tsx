@@ -11,7 +11,7 @@ const TemplatePost = (props: BlogPost) => {
 		<TemplateBase>
 			<article>
 				<nav>
-					<Link to="/">View all posts</Link>
+					<Link href="/">View all posts</Link>
 				</nav>
 				{title && <h1>{title}</h1>}
 

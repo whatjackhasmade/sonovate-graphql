@@ -25,7 +25,6 @@ const PostSingular: React.SFC<PostSingularProps> = (
 	if (!id) return null;
 
 	const href = `/${id}`;
-	const slug = slugify(String(title));
 
 	const isLarge = index % 5 === 0;
 
@@ -34,7 +33,7 @@ const PostSingular: React.SFC<PostSingularProps> = (
 
 	return (
 		<StyledPost className={classList}>
-			<Link to={href}>
+			<Link href={href}>
 				<div className="post__body">
 					<h2>{title}</h2>
 					{preface && <p>{preface}</p>}

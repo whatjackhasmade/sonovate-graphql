@@ -1,20 +1,25 @@
 import * as React from "react";
 import NextLink from "next/link";
 
-// allow this component to accept all properties of "a" tag
-interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	to: string;
-	// we can add more properties we need from next/link in the future
-}
+import type { LinkProps } from "next/link";
+
+declare type AllLinkProps = {
+	children: React.ReactNode;
+} & LinkProps;
 
 // Forward Refs, is useful
-const Link = React.forwardRef(({ to, ...props }: IProps, ref: any) => {
-	return (
-		<NextLink href={to}>
-			<a {...props} ref={ref} />
-		</NextLink>
-	);
-});
+const Link = React.forwardRef(
+	({ as, children, href, ...props }: AllLinkProps, ref: any) => {
+		return (
+			<NextLink as={as} href={href}>
+				<a {...props} ref={ref}>
+					{" "}
+					{children}
+				</a>
+			</NextLink>
+		);
+	}
+);
 
 export { Link };
 export default Link;
